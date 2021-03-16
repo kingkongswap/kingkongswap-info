@@ -71,9 +71,9 @@ export default function TokenLogo({ address, header = false, size = '24px', ...r
     )
   }
 
-  const path = `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${isAddress(
+  const path = `https://raw.githubusercontent.com/kingkongswap/token-assets/main/okexchain-testnet/${isAddress(
     address
-  )}/logo.png`
+  )}.png`
 
   return (
     <Inline>

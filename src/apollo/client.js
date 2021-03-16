@@ -4,7 +4,7 @@ import { HttpLink } from 'apollo-link-http'
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'http://test-graph.kingkong.exchange:8000/subgraphs/name/kingkongswap/kkswap',
+    uri: 'http://test-graph.kkt.one:7000/subgraphs/name/kingkongswap/kkswap',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -12,7 +12,7 @@ export const client = new ApolloClient({
 
 export const healthClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'http://test-graph.kingkong.exchange:8000/subgraphs/name/kingkongswap/kkswap/graphql',
+    uri: 'http://test-graph.kkt.one:7000/subgraphs/name/kingkongswap/kkswap/graphql',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -36,7 +36,7 @@ export const stakingClient = new ApolloClient({
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'http://test-graph.kingkong.exchange:8000/subgraphs/name/blocklytics/ethereum-blocks',
+    uri: 'http://test-graph.kkt.one:7000/subgraphs/name/blocklytics/ethereum-blocks',
   }),
   cache: new InMemoryCache(),
 })

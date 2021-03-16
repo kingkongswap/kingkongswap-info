@@ -183,6 +183,7 @@ function TxnList({ transactions, symbol0Override, symbol1Override, color }) {
   // parse the txns and format for UI
   useEffect(() => {
     if (transactions && transactions.mints && transactions.burns && transactions.swaps) {
+      console.log('transactions', transactions)
       let newTxns = []
       if (transactions.mints.length > 0) {
         transactions.mints.map((mint) => {
@@ -304,7 +305,7 @@ function TxnList({ transactions, symbol0Override, symbol1Override, color }) {
         )}
         {!below1080 && (
           <DataText area="account">
-            <Link color={color} external href={'https://etherscan.io/address/' + item.account}>
+            <Link color={color} external href={'https://www.oklink.com/okexchain-test/address/' + item.account}>
               {item.account && item.account.slice(0, 6) + '...' + item.account.slice(38, 42)}
             </Link>
           </DataText>

@@ -477,7 +477,11 @@ function PairPage({ pairAddress, history }) {
                     </AutoRow>
                   </Column>
                   <ButtonLight color={backgroundColor}>
-                    <Link color={backgroundColor} external href={'https://etherscan.io/address/' + pairAddress}>
+                    <Link
+                      color={backgroundColor}
+                      external
+                      href={'https://www.oklink.com/okexchain-test/address/' + pairAddress}
+                    >
                       View on Etherscan ↗
                     </Link>
                   </ButtonLight>

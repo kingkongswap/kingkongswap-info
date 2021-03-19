@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
-import Panel from '../Panel'
-import { AutoColumn } from '../Column'
-import { RowFixed } from '../Row'
-import { TYPE } from '../../Theme'
 import { usePairData } from '../../contexts/PairData'
+import { TYPE } from '../../Theme'
 import { formattedNum } from '../../utils'
+import { AutoColumn } from '../Column'
+import Panel from '../Panel'
+import { RowFixed } from '../Row'
 
 const PriceCard = styled(Panel)`
   position: absolute;
@@ -34,13 +34,13 @@ export default function UniPrice() {
   // const usdtPair = usePairData('0x7716f8b9d0112de69467923829197ed0e231cfb7')
 
   // wokt-usdk
-  const usdkPair = usePairData('0xfa6be8403ebc0d22add01d6360a01d2e87e52a68')
+  const usdkPair = usePairData('0xc3a9967c7ab0a4312e225feef19103168995643d')
 
   // wokt-usdc
-  const usdcPair = usePairData('0x5dc921cb3ab5bb7d94189aa460e0bd9e36ce6b52')
+  const usdcPair = usePairData('0x4a8123ac977380198241e9edc64a986e483ba75d')
 
   // wokt-usdt
-  const usdtPair = usePairData('0xbca246ce4d0e77c003906aec334195d3c65eedb4')
+  const usdtPair = usePairData('0x695Ef962b4Ee88ED193148E486208D58d184D203')
 
   const totalLiquidity = useMemo(() => {
     return usdkPair && usdcPair && usdtPair

@@ -4,7 +4,7 @@ import { HttpLink } from 'apollo-link-http'
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://test-graph.kkt.one/subgraphs/name/kingkongswap/kkswap',
+    uri: 'https://test-graph.kkt.one/subgraphs/name/kingkongswap/kkswapv3',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -12,7 +12,7 @@ export const client = new ApolloClient({
 
 export const healthClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://test-graph.kkt.one/subgraphs/name/kingkongswap/kkswap',
+    uri: 'https://test-graph.kkt.one/graphql',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,

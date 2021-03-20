@@ -264,6 +264,18 @@ async function getGlobalData(ethPrice, oldEthPrice) {
     })
     const twoWeekData = twoWeekResult.data.uniswapFactories[0]
 
+    console.log('getGlobalData', {
+      data,
+      oneDayBlock,
+      oneDayData,
+      twoDayBlock,
+      twoDayData,
+      oneWeekBlock,
+      oneWeekData,
+      twoWeekBlock,
+      twoWeekData,
+    })
+
     if (data && oneDayData && twoDayData && twoWeekData) {
       let [oneDayVolumeUSD, volumeChangeUSD] = get2DayPercentChange(
         data.totalVolumeUSD,

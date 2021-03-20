@@ -444,7 +444,7 @@ function TokenPage({ address, history }) {
                       external
                       href={'https://www.oklink.com/okexchain-test/address/' + address}
                     >
-                      View on Etherscan ↗
+                      View on OKLink ↗
                     </Link>
                   </ButtonLight>
                 </TokenDetailsLayout>

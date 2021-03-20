@@ -482,7 +482,7 @@ function PairPage({ pairAddress, history }) {
                       external
                       href={'https://www.oklink.com/okexchain-test/address/' + pairAddress}
                     >
-                      View on Etherscan ↗
+                      View on OKLink ↗
                     </Link>
                   </ButtonLight>
                 </TokenDetailsLayout>

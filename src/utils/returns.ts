@@ -4,8 +4,8 @@ import dayjs from 'dayjs'
 import { getShareValueOverTime } from '.'
 
 export const priceOverrides = [
-  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // USDC
-  '0x6b175474e89094c44da98b954eedeac495271d0f', // DAI
+  '0x3e33590013b24bf21d4ccca3a965ea10e570d5b2', // USDC
+  '0x533367b864d9b9aa59d0dcb6554df0c89feef1ff', // USDK
 ]
 
 interface ReturnMetrics {
@@ -28,7 +28,9 @@ interface Position {
   token1PriceUSD: number
 }
 
-const PRICE_DISCOVERY_START_TIMESTAMP = 1589747086
+// before subgraph get first data
+// https://www.oklink.com/okexchain-test/block/1173600
+const PRICE_DISCOVERY_START_TIMESTAMP = 1615122791
 
 function formatPricesForEarlyTimestamps(position): Position {
   if (position.timestamp < PRICE_DISCOVERY_START_TIMESTAMP) {
@@ -39,11 +41,11 @@ function formatPricesForEarlyTimestamps(position): Position {
       position.token1PriceUSD = 1
     }
     // WETH price
-    if (position.pair?.token0.id === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') {
-      position.token0PriceUSD = 203
+    if (position.pair?.token0.id === '0x70c1c53e991f31981d592c2d865383ac0d212225') {
+      position.token0PriceUSD = 100
     }
-    if (position.pair?.token1.id === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') {
-      position.token1PriceUSD = 203
+    if (position.pair?.token1.id === '0x70c1c53e991f31981d592c2d865383ac0d212225') {
+      position.token1PriceUSD = 100
     }
   }
   return position

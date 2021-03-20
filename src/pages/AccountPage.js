@@ -186,7 +186,7 @@ function AccountPage({ account }) {
                 href={'https://www.oklink.com/okexchain-test/address/' + account}
                 target="_blank"
               >
-                <TYPE.main fontSize={14}>View on Etherscan</TYPE.main>
+                <TYPE.main fontSize={14}>View on OKLink</TYPE.main>
               </Link>
             </span>
             <AccountWrapper>

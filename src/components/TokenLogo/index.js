@@ -56,7 +56,7 @@ export default function TokenLogo({ address, header = false, size = '24px', ...r
     address = '0xc011a72400e58ecd99ee497cf89e3775d4bd732f'
   }
 
-  if (address?.toLowerCase() === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') {
+  if (address?.toLowerCase() === '0x70c1c53e991f31981d592c2d865383ac0d212225') {
     return (
       <StyledEthereumLogo size={size} {...rest}>
         <img
@@ -71,9 +71,7 @@ export default function TokenLogo({ address, header = false, size = '24px', ...r
     )
   }
 
-  const path = `https://raw.githubusercontent.com/kingkongswap/token-assets/main/okexchain-testnet/${isAddress(
-    address
-  )}.png`
+  const path = `https://unpkg.com/@kingkongswap/token-assets@latest/okexchain-testnet/${isAddress(address)}.png`
 
   return (
     <Inline>

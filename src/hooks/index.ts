@@ -8,9 +8,8 @@ import copy from 'copy-to-clipboard'
 export function useColor(tokenAddress, token) {
   const [color, setColor] = useState('#2172E5')
   if (tokenAddress) {
-    const path = `https://raw.githubusercontent.com/kingkongswap/token-assets/main/okexchain-testnet/${isAddress(
-      tokenAddress
-    )}.png`
+    const path = `https://unpkg.com/@kingkongswap/token-assets@0.2.0/okexchain-testnet/${isAddress(tokenAddress)}.png`
+
     if (path) {
       Vibrant.from(path).getPalette((err, palette) => {
         if (palette && palette.Vibrant) {

@@ -717,7 +717,7 @@ export function useTokenPriceData(tokenAddress, timeWindow, interval = 3600) {
     const currentTime = dayjs.utc()
     const windowSize = timeWindow === timeframeOptions.MONTH ? 'month' : 'week'
     const startTime =
-      timeWindow === timeframeOptions.ALL_TIME ? 1589760000 : currentTime.subtract(1, windowSize).startOf('hour').unix()
+      timeWindow === timeframeOptions.ALL_TIME ? 1615122791 : currentTime.subtract(1, windowSize).startOf('hour').unix()
 
     async function fetch() {
       let data = await getIntervalTokenData(tokenAddress, startTime, interval, latestBlock)

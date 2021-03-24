@@ -40,16 +40,16 @@ export function getTimeframe(timeWindow) {
 export function getPoolLink(token0Address, token1Address = null, remove = false) {
   if (!token1Address) {
     return (
-      `https://app.kkt.one/` +
+      `https://info.kingkong.exchange/#/` +
       (remove ? `remove` : `add`) +
-      `/${token0Address === '0x70c1c53e991f31981d592c2d865383ac0d212225' ? 'ETH' : token0Address}/${'ETH'}`
+      `/${token0Address === '0x70c1c53e991f31981d592c2d865383ac0d212225' ? 'OKT' : token0Address}/${'OKT'}`
     )
   } else {
     return (
-      `https://app.kkt.one/` +
+      `https://info.kingkong.exchange/#/` +
       (remove ? `remove` : `add`) +
-      `/${token0Address === '0x70c1c53e991f31981d592c2d865383ac0d212225' ? 'ETH' : token0Address}/${
-        token1Address === '0x70c1c53e991f31981d592c2d865383ac0d212225' ? 'ETH' : token1Address
+      `/${token0Address === '0x70c1c53e991f31981d592c2d865383ac0d212225' ? 'OKT' : token0Address}/${
+        token1Address === '0x70c1c53e991f31981d592c2d865383ac0d212225' ? 'OKT' : token1Address
       }`
     )
   }
@@ -57,11 +57,11 @@ export function getPoolLink(token0Address, token1Address = null, remove = false)
 
 export function getSwapLink(token0Address, token1Address = null) {
   if (!token1Address) {
-    return `https://app.kkt.one/swap?inputCurrency=${token0Address}`
+    return `https://info.kingkong.exchange/#/swap?inputCurrency=${token0Address}`
   } else {
-    return `https://app.kkt.one/swap?inputCurrency=${
-      token0Address === '0x70c1c53e991f31981d592c2d865383ac0d212225' ? 'ETH' : token0Address
-    }&outputCurrency=${token1Address === '0x70c1c53e991f31981d592c2d865383ac0d212225' ? 'ETH' : token1Address}`
+    return `https://info.kingkong.exchange/#/swap?inputCurrency=${
+      token0Address === '0x70c1c53e991f31981d592c2d865383ac0d212225' ? 'OKT' : token0Address
+    }&outputCurrency=${token1Address === '0x70c1c53e991f31981d592c2d865383ac0d212225' ? 'OKT' : token1Address}`
   }
 }
 

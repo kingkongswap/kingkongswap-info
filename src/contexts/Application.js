@@ -201,10 +201,10 @@ export function useLatestBlocks() {
 export function useCurrentCurrency() {
   const [state, { update }] = useApplicationContext()
   const toggleCurrency = useCallback(() => {
-    if (state.currency === 'ETH') {
+    if (state.currency === 'OKT') {
       update('USD')
     } else {
-      update('ETH')
+      update('OKT')
     }
   }, [state, update])
   return [state[CURRENCY], toggleCurrency]
@@ -268,18 +268,18 @@ export function useListedTokens() {
   const supportedTokens = state?.[SUPPORTED_TOKENS]
 
   useEffect(() => {
-    async function fetchList() {
-      const allFetched = await SUPPORTED_LIST_URLS__NO_ENS.reduce(async (fetchedTokens, url) => {
-        const tokensSoFar = await fetchedTokens
-        const newTokens = await getTokenList(url)
-        return Promise.resolve([...tokensSoFar, ...newTokens.tokens])
-      }, Promise.resolve([]))
-      let formatted = allFetched?.map((t) => t.address.toLowerCase())
-      updateSupportedTokens(formatted)
-    }
-    if (!supportedTokens) {
-      fetchList()
-    }
+    // async function fetchList() {
+    //   const allFetched = await SUPPORTED_LIST_URLS__NO_ENS.reduce(async (fetchedTokens, url) => {
+    //     const tokensSoFar = await fetchedTokens
+    //     const newTokens = await getTokenList(url)
+    //     return Promise.resolve([...tokensSoFar, ...newTokens.tokens])
+    //   }, Promise.resolve([]))
+    //   let formatted = allFetched?.map((t) => t.address.toLowerCase())
+    //   updateSupportedTokens(formatted)
+    // }
+    // if (!supportedTokens) {
+    //   fetchList()
+    // }
   }, [updateSupportedTokens, supportedTokens])
 
   return supportedTokens
